@@ -1,0 +1,54 @@
+<html>
+
+<body>
+    
+<input id="num1">
+
+<select required id="operacao">
+<option value="multiplicação"> * </option>
+<option value="divisão"> / </option>
+<option value="soma"> + </option>
+<option value="subtração"> - </option>
+</select>
+
+<input id="num2">
+
+<button onclick="operacao1()"> Calcular </button>
+
+<input type="text" id="resultado">
+
+</body>
+
+<script language="javascript">
+
+function operacao1() {
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+console.log(num1, num2);
+
+    if (document.getElementById("operacao").value == "multiplicação") {
+        var resultado = parseInt(num1)  * parseInt(num2)
+        document.getElementById("resultado").value = resultado
+        
+    }
+
+    if (document.getElementById("operacao").value == "divisão") {
+        var resultado = document.getElementById("resultado");
+        resultado.value = parseInt(num1)  / parseInt(num2)
+    }
+
+    if (document.getElementById("operacao").value == "soma") {
+        var resultado = document.getElementById("resultado");
+        resultado.value = parseInt(num1)  + parseInt(num2)
+    }
+
+    if (document.getElementById("operacao").value == "subtração") {
+        var resultado = document.getElementById("resultado");
+        resultado.value = parseInt(num1)  - parseInt(num2)
+    }
+}
+
+</script>
+
+
+</html>
